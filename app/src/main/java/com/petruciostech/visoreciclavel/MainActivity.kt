@@ -19,12 +19,9 @@ class MainActivity : AppCompatActivity() {
 
         UserList = arrayListOf()
         recycleView = findViewById(R.id.recycleView)
-
+        
         setUserInfo()
         setAdapter()
-
-
-
     }
 
     private fun setAdapter() {
@@ -33,19 +30,16 @@ class MainActivity : AppCompatActivity() {
         recycleView.layoutManager = layotMenager
         recycleView.itemAnimator = DefaultItemAnimator()
         recycleView.adapter = adapter
-
-
     }
+    
     private fun setUserInfo() {
         UserList.add(User("João"))
         UserList.add(User("Aline"))
         UserList.add(User("Pedro"))
-
-
     }
-
 
     fun ovoTestar(view:View){
         Toast.makeText(this, "Hehe Boy", Toast.LENGTH_SHORT).show()
     }
+    
 }
